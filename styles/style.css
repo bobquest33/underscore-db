@@ -1,0 +1,28 @@
+.social-buttons {
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 60px;
+  text-align: center;
+}
+
+pre {
+  padding: 0;
+  border: none;
+}
+
+pre code {
+  padding: 9.5px !important;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.footer {
+  padding: 30px 0 30px 0;
+  color: #999;
+}
+
