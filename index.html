@@ -49,7 +49,7 @@ _.insert(db.posts, {body: 'new post', published: false});
 
 _.update(db.posts, 1, {published: true});
 
-_.updateWhere(db, {published: true}, {published: false});
+_.updateWhere(db.posts, {published: true}, {published: false});
 
 _.remove(db.posts, 1);
 
