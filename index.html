@@ -5,30 +5,30 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/bootswatch/3.0.3/yeti/bootstrap.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="styles/highlight/obsidian.css">
+  <link rel="stylesheet" href="styles/highlight/googlecode.css">
   <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <div id="fb-root"></div>
+  <!-- <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
     if (d.getElementById(id)) return;
     js = d.createElement(s); js.id = id;
     js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+  }(document, 'script', 'facebook-jssdk'));</script> -->
 
   <div class="container">    
     <h2>
-      Underscore/Lo-Dash + <a href="https://github.com/typicode/underscore.db">Underscore.db</a><br>=<br><strong>Lightweight</strong> pure JavaScript database library for <strong>Node and the browser</strong>
+      Underscore/Lo-Dash + <a href="https://github.com/typicode/underscore.db">Underscore.db</a><br>=<br><strong>Lightweight</strong> pure JavaScript database library for <strong>Node, node-webkit and the browser</strong>
     </h2>
 
     <div class="social-buttons">
       <iframe src="http://ghbtns.com/github-btn.html?user=typicode&repo=underscore.db&type=watch&count=true"
 allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
       <a href="https://twitter.com/share" class="twitter-share-button" data-url="https://github.com/typicode/underscore.db" data-text="Underscore.db - Pure JavaScript database based on Underscore for Node and the browser" data-hashtags="javascript">Tweet</a>
-      <g:plusone size="medium" href="https://github.com/typicode/underscore.db"></g:plusone>
-      <div class="fb-like" data-href="https://github.com/typicode/underscore.db" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div>
+      <!--  <g:plusone size="medium" href="https://github.com/typicode/underscore.db"></g:plusone>
+      <div class="fb-like" data-href="https://github.com/typicode/underscore.db" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false"></div> -->
     </div>
 
     <h3>README</h3>
@@ -39,52 +39,24 @@ allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"><
     
     <p>Open a console and copy/paste one of these statements.</p>
 
-<pre><code>// Create DB
+    <hr>
 
-var db = {
-  posts: [
-    {id: 1, body: 'foo', views: 10, published: false},
-    {id: 2, body: 'bar', views: 20, published: true}
-  ],
-  comments: [
-    {id: 1, body: 'baz', postId: 1},
-    {id: 2, body: 'qux', postId: 2}
-  ]
-}
+<pre><code>db;
 
-// CRUD operations
+_.get(db.posts, 1);
 
-var post            = _.get(db.posts, 1);
+_.insert(db.posts, {body: 'new post', published: false});
 
-var insertedPost    = _.insert(db.posts, {body: 'new post', published: false});
+_.update(db.posts, 1, {published: true});
 
-var updatedPost     = _.update(db.posts, 1, {published: true});
+_.updateWhere(db, {published: true}, {published: false});
 
-var removedPost     = _.remove(db.posts, 1);
+_.remove(db.posts, 1);
 
-var removedComments = _.removeWhere(db.comments, {postId: 1});
-
-// Query and sort
-
-var publishedPosts  = _.where(db.posts, {published: true});
-
-var mostViewedPosts = _.sortBy(db.posts, function(post) {
-  return post.views;
-});
-
-// Replace, empty or destroy table
-
-db.posts = newPosts;
-
-db.posts = [];
-
-delete db.posts;
+_.removeWhere(db.comments, {postId: 1});
 </code></pre>
     
-    <p>
-      As you can see, since the database is a simple JavaScript object, you can also use native functions.
-      Also please note that where and sortBy are just Underscore functions.
-    </p>
+    <hr>
 
     <h3>Learn more</h3>
 
@@ -99,7 +71,7 @@ delete db.posts;
 
   <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+  <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script> -->
 
   <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
   <script src="highlight.pack.js"></script>
