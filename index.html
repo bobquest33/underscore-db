@@ -19,7 +19,7 @@
   }(document, 'script', 'facebook-jssdk'));</script> -->
 
   <div class="container">
-    <h1>{ <span class="underscore">_</span> }</h1>  
+    <h1>{ <span class="underscore">_</span> }</h1>
     <h3>
       Underscore/Lo-Dash + <a href="https://github.com/typicode/underscore.db">Underscore.db</a><br>=<br>Pure JavaScript database library for <strong>Node, node-webkit and the browser</strong>
     </h3>
@@ -37,7 +37,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"><
     <p>See <a href="https://github.com/typicode/underscore.db">https://github.com/typicode/underscore.db</a>.</p>
 
     <h4>Try it!</h4>
-    
+
     <p>Open a console and copy/paste one of these statements.</p>
 
     <hr>
@@ -56,7 +56,26 @@ _.remove(db.posts, 1);
 
 _.removeWhere(db.comments, {postId: 1});
 </code></pre>
-    
+
+    <hr>
+
+    <h4>Queries</h4>
+
+    <p>
+      Using Underscore or Lo-Dash functions, you can create complex queries.<br>
+      For example, this one will return the titles of the five most viewed post.
+    </p>
+
+    <hr>
+
+<pre><code>_(db.posts)
+  .where({published: true})
+  .sortBy('views')
+  .first(5)
+  .pluck('title')
+  .value();
+</code></pre>
+
     <hr>
 
     <h4>Learn more</h4>
@@ -65,7 +84,7 @@ _.removeWhere(db.comments, {postId: 1});
 
   </div>
   <div class="container">
-    <div class="footer">  
+    <div class="footer">
       <p>MIT License - Created by <a href="https://github.com/typicode">Typicode</a></p>
     </div>
   </div>
@@ -81,13 +100,13 @@ _.removeWhere(db.comments, {postId: 1});
   <!-- ============================ -->
 
   <!-- Loading Underscore, Underscore.db and db object -->
-  
+
   <!-- ============================ -->
-  
-  <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
   <script src="underscore.db.min.js"></script>
   <script src="db.js"></script>
-  
+
   <!-- ============================ -->
 
   <script>

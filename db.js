@@ -1,12 +1,12 @@
 var db = {
   posts: [
-    {id: 1, body: 'Post one', published: true},
-    {id: 2, body: 'Post two', published: true},
-    {id: 3, body: 'Post three', published: true},
-    {id: 4, body: 'Post four', published: true},
-    {id: 5, body: 'Post five', published: false},
-    {id: 6, body: 'Post six', published: false},
-    {id: 7, body: 'Post seven', published: false}
+    {id: 1, title: 'one', body: 'Post one', published: true, views: 400},
+    {id: 2, title: 'two', body: 'Post two', published: true, views: 3200},
+    {id: 3, title: 'three', body: 'Post three', published: true, views: 2400},
+    {id: 4, title: 'four', body: 'Post four', published: true, views: 8400},
+    {id: 5, title: 'five', body: 'Post five', published: false, views: 1700},
+    {id: 6, title: 'six', body: 'Post six', published: false, views: 9000},
+    {id: 7, title: 'seven', body: 'Post seven', published: false, views: 200}
   ],
   comments: [
     {id: 1, body: 'Comment one', postId: 1},
