@@ -40,8 +40,6 @@ allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"><
 
     <p>Open a console and copy/paste one of these statements.</p>
 
-    <hr>
-
 <pre><code>db;
 
 _.get(db.posts, 1);
@@ -57,16 +55,12 @@ _.remove(db.posts, 1);
 _.removeWhere(db.comments, {postId: 1});
 </code></pre>
 
-    <hr>
-
-    <h4>Queries</h4>
+    <h4>Query</h4>
 
     <p>
       Using Underscore or Lo-Dash functions, you can create complex queries.<br>
       For example, this one will return the titles of the five most viewed post.
     </p>
-
-    <hr>
 
 <pre><code>_(db.posts)
   .where({published: true})
@@ -76,7 +70,12 @@ _.removeWhere(db.comments, {postId: 1});
   .value();
 </code></pre>
 
-    <hr>
+    <h4>Persist</h4>
+
+<pre><code>_.save(db);
+
+_.load();
+</code></pre>
 
     <h4>Learn more</h4>
 
