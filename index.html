@@ -29,7 +29,7 @@ allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"><
 
     <p>Open a console and copy/paste one of these statements.</p>
 
-<pre><code>db;
+<pre><code>console.log(db); // to view database initial state
 
 _.get(db.posts, 1);
 
@@ -60,6 +60,10 @@ _.removeWhere(db.comments, {postId: 1});
 </code></pre>
 
     <h4>Persist</h4>
+
+    <p>
+      Persistance is done using LocalStorage.
+    </p>
 
 <pre><code>_.save(db);
 
