@@ -31,15 +31,15 @@ allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"><
 
 <pre><code>console.log(db); // to view database initial state
 
-_.get(db.posts, 1);
+_.getById(db.posts, 1);
 
 _.insert(db.posts, {body: 'new post', published: false});
 
-_.update(db.posts, 1, {published: true});
+_.updateById(db.posts, 1, {published: true});
 
 _.updateWhere(db.posts, {published: false}, {published: true});
 
-_.remove(db.posts, 1);
+_.removeById(db.posts, 1);
 
 _.removeWhere(db.comments, {postId: 1});
 </code></pre>
